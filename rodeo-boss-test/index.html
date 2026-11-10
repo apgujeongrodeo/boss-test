@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>나는 어떤 사장님이 될까?</title>
+  <meta name="description" content="동네 빵집 사장님부터 로데오 빌딩주까지. 12문항으로 알아보는 나의 사장님 유형 테스트 · 로데오공인중개사무소">
+  <meta property="og:title" content="나는 어떤 사장님이 될까?">
+  <meta property="og:description" content="동네 빵집 사장님일까, 랜드마크 빌딩주일까? 2분 만에 알아보는 사장님 유형 테스트">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#FFF3E4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='12' width='26' height='17' rx='3' fill='%23FF8A5B'/%3E%3Cpath d='M2 13l3-8h22l3 8z' fill='%232E2A4F'/%3E%3Crect x='13' y='18' width='6' height='11' rx='1' fill='%23FFF3E4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="./" aria-label="처음으로">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>로데오 사장님 연구소</span>
+    </a>
+    <span class="by">by 로데오공인중개사무소</span>
+  </header>
+
+  <main id="app">
+    <!-- 시작 -->
+    <section id="view-intro" class="view">
+      <div class="intro">
+        <div class="intro-copy">
+          <p class="kicker">12문항 · 2분 · 재미로 보는 테스트</p>
+          <h1>나는 어떤<br><span class="hl">사장님</span>이 될까?</h1>
+          <p class="lead">골목 빵집 사장님일까, 로데오 랜드마크 빌딩주일까?<br>취향과 꿈을 따라가다 보면 나만의 가게가 보여요.</p>
+          <button class="btn primary big" id="btn-start" type="button">내 가게 찾으러 가기</button>
+          <p class="note">결과는 8가지 사장님 캐릭터 중 하나로 나와요.</p>
+        </div>
+        <div class="intro-stage" aria-hidden="true">
+          <div class="street" id="intro-street"></div>
+        </div>
+      </div>
+
+      <div class="ribbon" aria-hidden="true"><div class="ribbon-track" id="ribbon"></div></div>
+    </section>
+
+    <!-- 질문 -->
+    <section id="view-quiz" class="view" hidden>
+      <div class="quiz">
+        <div class="quiz-top">
+          <button class="link-btn" id="btn-back" type="button">← 이전</button>
+          <div class="steps-dots" id="dots" aria-hidden="true"></div>
+          <span class="counter" id="counter">1/12</span>
+        </div>
+        <div class="q-illust" id="q-illust" aria-hidden="true"></div>
+        <p class="q-chip" id="q-chip"></p>
+        <h2 class="q-text" id="q-text"></h2>
+        <p class="q-hint" id="q-hint"></p>
+        <div class="options" id="options"></div>
+        <button class="btn primary" id="btn-next" type="button" hidden>다음</button>
+      </div>
+    </section>
+
+    <!-- 로딩 -->
+    <section id="view-loading" class="view" hidden>
+      <div class="loading">
+        <div class="loading-shop" id="loading-art" aria-hidden="true"></div>
+        <p class="loading-text">간판 다는 중…</p>
+      </div>
+    </section>
+
+    <!-- 결과 -->
+    <section id="view-result" class="view" hidden></section>
+  </main>
+
+  <footer class="foot">
+    <p>재미로 보는 테스트예요. 실제 창업·투자 판단은 상담을 통해 꼼꼼히 확인하세요.</p>
+    <p class="foot-brand">로데오공인중개사무소 · 압구정로데오</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
